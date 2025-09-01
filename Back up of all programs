@@ -1,0 +1,461 @@
+# ULTRON 
+
+'''import pyttsx3
+import datetime
+import speech_recognition as sr
+import wikipedia
+import subprocess
+import webbrowser
+import subprocess
+import requests
+from AppOpener import open
+
+engine = pyttsx3.init("sapi5")
+voices = engine.getProperty("voices")
+#print(voices[0].id)
+engine.setProperty("voice",voices[0].id)
+rate=engine.getProperty("rate")
+#print(rate)
+engine.setProperty("rate",175)
+volume=engine.getProperty("volume")
+engine.setProperty("volume",1)
+
+
+
+
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+def wishme():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        speak("good morning sir i'm ULTRON")
+
+    elif hour>=12 and hour<16:
+        speak("Good Afternoon sir i'm ULTRON")
+
+    elif hour>=16 and hour<20:
+        speak("Good Evening Sir i'm ULTRON i hope you have taken your evening snack how may i help you sir  ")
+    
+    elif hour>=20 and hour<24:
+        speak("Sir this your sleeping time what happened and how may i help you")
+
+def takecommand():
+
+    r = sr.Recognizer() 
+    with sr.Microphone() as source:
+        print("LISTENING....")
+        r.pause_threshold = 1
+        audio = r.listen(source)
+    
+    try:
+        print("Recognizing****")
+        query = r.recognize_google(audio, language='en-in')
+        print(f"user said: {query}\n")
+
+    except Exception as e:
+        print("sorry sir i can't recognise that can you say that again********")
+        return "None"
+    return query
+
+
+if  __name__ == "__main__":
+    wishme()
+
+    while True :
+     query = takecommand().lower()
+
+        
+     if "wikipedia" in query:
+            speak("ok sir i'm searching wikipedia for you")
+            query = query.replace("wikipedia","")
+            results = wikipedia.summary(query, sentences = 2)
+            speak("According to wikipedia")
+            print(results)
+            speak(results)
+    
+     elif "you tube" in  query:
+        speak("ok sir opening youtube")
+        speak("here is your youtube sir enjoy ")
+        webbrowser.open("youtube.com")
+
+     elif "google" in  query:
+        speak("ok sir opening google")
+        speak("here is your google enjoy ")
+        webbrowser.open("google.com")
+
+     elif "microsoft edge" in  query:
+        speak("ok sir opening microsoft edge ")
+        speak("here is your microsoft edge enjoy ")
+        subprocess.Popen(["MicrosoftEdge.exe"])
+
+     elif "weather" in query:
+        speak("this is the weather")
+        webbrowser.open("www.accuweather.com")
+
+     elif "time" in query:
+        now = datetime.datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        speak("The current time is")
+        speak(current_time)
+
+     elif "thank you" in query:
+        speak ("that's my duty sir anything else")
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     elif "stop" in query:
+        speak("good bye sir have a great day")
+        break'''
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# A.I Programs
+
+
+
+'''import speech_recognition as sr
+import gTTs
+import pyglet
+import datetime
+
+r = sr.Recognizer()
+
+def listen_for_command():
+  with sr.Microphone() as source:
+    print("Listening for command...")
+    audio = r.listen(source)
+  try:
+    command = r.recognize_google(audio)
+    print("You said: " + command)
+    return command
+  except sr.UnknownValueError:
+    print("Sorry, I didn't understand that.")
+
+def process_command(command):
+  if "what is your name" in command:
+    response = "My name is D.U.D.E."
+  elif "what time is it" in command:
+    current_time = datetime.datetime.now().time()
+    response = "The current time is " + str(current_time)
+  elif "thank you" in command:
+    response = "You're welcome!"
+  else:
+    response = "I'm sorry, I didn't understand that command. Could you please try again?"
+  return response
+
+def speak(text):
+  tts = gTTs(text)'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Another A.I
+
+
+
+
+
+'''import pyttsx3
+engine = pyttsx3.init()
+                                          #engine.say("Hello, world i'm DuDE assistant of Mr Tushar Sharma")
+                                          #engine.runAndWait()
+rate= engine.getProperty("rate")
+print(rate)
+engine.setProperty("rate",170)
+volume= engine.getProperty("volume")
+print(format(volume))
+engine.setProperty("volume",5)
+voices=engine.getProperty("voices")
+print("Male Voice :{0}".format(voices[0].id))
+print("Female Voice :{0}".format(voices[1].id))
+engine.setProperty("voice",voices[1].id)
+engine.say("hello i'm LISSA i'm personal assistant of maker Mr. Tushar Sharma ")
+engine.runAndWait()'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''import speech_recognition as sr
+import pyttsx3
+import datetime
+
+r = sr.Recognizer()
+engine = pyttsx3.init()
+
+def listen_for_command():
+  with sr.Microphone() as source:
+    print("Listening for command...")
+    audio = r.listen(source)
+  try:
+    command = r.recognize_google(audio)
+    print("You said: " + command)
+    return command
+  except sr.UnknownValueError:
+    print("Sorry, I didn't understand that.")
+
+def process_command(command):
+  if "what is your name" in command:
+    response = "My name is D.U.D.E."
+  elif "what time is it" or "what is the time" in command:
+    current_time = datetime.datetime.now().time()
+    response = "The current time is " + str(current_time)
+  elif "thank you" in command:
+    response = "You're welcome!"
+  else:
+    response = "I'm sorry, I didn't understand that command. Could you please try again?"
+  return response
+
+def speak(text):
+  engine.say(text)
+  engine.runAndWait()
+
+current_hour = datetime.datetime.now().hour
+if current_hour < 12:
+  greeting = "Good morning"
+else:
+  greeting = "Good evening"
+speak(greeting)
+
+while True:
+  command = listen_for_command()
+  response = process_command(command)
+  speak(response)'''
+
+
+
+'''import speech_recognition as sr
+import subprocess
+
+def listen_for_command():
+    # Set up the recognizer
+    r = sr.Recognizer()
+    mic = sr.Microphone()
+
+    # Listen for the command
+    with mic as source:
+        print("Listening...")
+        audio = r.listen(source)
+
+    # Recognize the command
+    transcribed_command = r.recognize_google(audio)
+    print("Command: " + transcribed_command)
+
+    return transcribed_command
+
+def perform_task(command):
+    if "open music app" in command:
+        subprocess.call(["open", "spotify"])
+    elif "play my playlist" in command:
+        subprocess.call(["play", "tension free"])
+
+if __name__ == "__main__":
+    command = listen_for_command()
+    perform_task(command)'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''import face_recognisation
+import cv2
+import numpy as np
+import csv
+from datetime import datetime
+
+
+
+video_capture = cv2.VideoCapture(0)
+
+Image1 = face_recognisation.load_image_file("")
+Image1_encoding = face_recognisation.face_encoding(Image1) (0)
+
+
+#known_face = [Image1]
+
+
+
+
+
+
+
+
+
+
+
+known_face_encodings = [Image1_encoding]
+known_face_names = ["Tushar"]
+
+
+
+while True :
+    frame = video_capture.read()
+    small_frame = cv2.resize(frame,(0,0), fx = 0.25, fy = 0.25)
+    rgb_small_frame = cv2.cvtColor(small_frame,cv2.COLOR_BGR2RGB)
+    
+
+
+    face_location = face_recognisation.face_location(rgb_small_frame)
+    face_encodings = face_recognisation.face_encodings(rgb_small_frame, face_location)
+
+
+    for face_encoding in face_encodings:
+        matches = face_recognisation.compare_faces(known_face_encodings,face_encoding)
+        face_distance = face_recognisation.face_distance(known_face_encodings,face_encoding)
+        best_match_index =np.argmix(face_distance)
+
+
+        if (matches[best_match_index]):
+            name = known_face_names[best_match_index]
+
+        cv2.imshow("Attendance",frame)
+        if cv2.waitkey(1)& 0xFF == ord("q"):
+            break'''
+

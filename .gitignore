@@ -1,0 +1,13 @@
+AppData/
+*.jtx
+*.log
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
+
+
+
+.vscode/
+.idea/
+*.iml

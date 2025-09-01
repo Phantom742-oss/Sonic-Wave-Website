@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicWave - Premium Audio Equipment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00D4FF',
+                        'dark-bg': '#0A0A0A',
+                        'card-bg': '#1A1A1A'
+                    },
+                    fontFamily: {
+                        'tech': ['Orbitron', 'monospace'],
+                        'modern': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-white font-modern">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark-bg/90 backdrop-blur-md border-b border-neon-blue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-tech text-2xl font-bold text-neon-blue text-glow">SonicWave</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-neon-blue transition-colors">Home</a>
+                    <a href="#products" class="hover:text-neon-blue transition-colors">Products</a>
+                    <a href="#about" class="hover:text-neon-blue transition-colors">About</a>
+                    <a href="#reviews" class="hover:text-neon-blue transition-colors">Reviews</a>
+                </div>
+                <button class="md:hidden text-neon-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center gradient-bg pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="font-tech text-5xl md:text-7xl font-black text-white leading-tight">
+                        Experience
+                        <span class="text-neon-blue text-glow block">True Sound</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        Immerse yourself in crystal-clear audio with our premium collection of soundbars and speakers. Engineered for perfection, designed for your lifestyle.
+                    </p>
+                    <button class="bg-neon-blue text-dark-bg px-8 py-4 rounded-lg font-semibold text-lg hover-glow transition-all duration-300">
+                        Explore Collection
+                    </button>
+                </div>
+                <div class="relative">
+                    <!-- Premium Soundbar SVG -->
+                    <svg viewBox="0 0 400 200" class="w-full max-w-md mx-auto glow-effect rounded-lg">
+                        <defs>
+                            <linearGradient id="soundbarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2A2A2A"/>
+                                <stop offset="50%" style="stop-color:#1A1A1A"/>
+                                <stop offset="100%" style="stop-color:#0A0A0A"/>
+                            </linearGradient>
+                            <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:transparent"/>
+                                <stop offset="50%" style="stop-color:#00D4FF"/>
+                                <stop offset="100%" style="stop-color:transparent"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Main soundbar body -->
+                        <rect x="50" y="80" width="300" height="40" rx="20" fill="url(#soundbarGradient)" stroke="#333" stroke-width="1"/>
+                        <!-- Speaker grilles -->
+                        <circle cx="100" cy="100" r="12" fill="#333" stroke="#555" stroke-width="1"/>
+                        <circle cx="140" cy="100" r="12" fill="#333" stroke="#555" stroke-width="1"/>
+                        <circle cx="180" cy="100" r="12" fill="#333" stroke="#555" stroke-width="1"/>
+                        <circle cx="220" cy="100" r="12" fill="#333" stroke="#555" stroke-width="1"/>
+                        <circle cx="260" cy="100" r="12" fill="#333" stroke="#555" stroke-width="1"/>
+                        <circle cx="300" cy="100" r="12" fill="#333" stroke="#555" stroke-width="1"/>
+                        <!-- LED indicator -->
+                        <rect x="320" y="95" width="20" height="10" rx="5" fill="#00D4FF" opacity="0.8">
+                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+                        </rect>
+                        <!-- Glow effect -->
+                        <rect x="50" y="78" width="300" height="2" fill="url(#glowGradient)" opacity="0.6">
+                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+                        </rect>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-20 bg-card-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-tech text-4xl font-bold text-white mb-4">Featured Products</h2>
+                <p class="text-gray-400 text-lg">Premium audio equipment for the discerning listener</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-dark-bg rounded-xl p-6 hover-glow transition-all duration-300 border border-gray-800">
+                    <div class="mb-6">
+                        <svg viewBox="0 0 200 120" class="w-full h-32">
+                            <rect x="20" y="50" width="160" height="20" rx="10" fill="#2A2A2A" stroke="#00D4FF" stroke-width="1"/>
+                            <circle cx="60" cy="60" r="6" fill="#333"/>
+                            <circle cx="80" cy="60" r="6" fill="#333"/>
+                            <circle cx="100" cy="60" r="6" fill="#333"/>
+                            <circle cx="120" cy="60" r="6" fill="#333"/>
+                            <circle cx="140" cy="60" r="6" fill="#333"/>
+                            <rect x="160" y="55" width="15" height="10" rx="2" fill="#00D4FF"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-tech text-xl font-bold mb-2">SonicWave Pro X1</h3>
+                    <p class="text-gray-400 mb-4">Premium soundbar with Dolby Atmos and wireless subwoofer</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-neon-blue">$899</span>
+                        <button class="bg-neon-blue text-dark-bg px-6 py-2 rounded-lg font-semibold hover:bg-white transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-dark-bg rounded-xl p-6 hover-glow transition-all duration-300 border border-gray-800">
+                    <div class="mb-6">
+                        <svg viewBox="0 0 200 120" class="w-full h-32">
+                            <circle cx="100" cy="60" r="40" fill="#2A2A2A" stroke="#00D4FF" stroke-width="2"/>
+                            <circle cx="100" cy="60" r="25" fill="#1A1A1A" stroke="#333" stroke-width="1"/>
+                            <circle cx="100" cy="60" r="15" fill="#333"/>
+                            <circle cx="100" cy="60" r="8" fill="#00D4FF" opacity="0.8"/>
+                            <rect x="95" y="20" width="10" height="15" rx="5" fill="#333"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-tech text-xl font-bold mb-2">AeroSound 360</h3>
+                    <p class="text-gray-400 mb-4">Wireless speaker with 360° surround sound technology</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-neon-blue">$449</span>
+                        <button class="bg-neon-blue text-dark-bg px-6 py-2 rounded-lg font-semibold hover:bg-white transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-dark-bg rounded-xl p-6 hover-glow transition-all duration-300 border border-gray-800">
+                    <div class="mb-6">
+                        <svg viewBox="0 0 200 120" class="w-full h-32">
+                            <rect x="30" y="40" width="140" height="40" rx="8" fill="#2A2A2A" stroke="#00D4FF" stroke-width="1"/>
+                            <rect x="40" y="50" width="30" height="20" rx="4" fill="#333"/>
+                            <rect x="80" y="50" width="30" height="20" rx="4" fill="#333"/>
+                            <rect x="120" y="50" width="30" height="20" rx="4" fill="#333"/>
+                            <circle cx="160" cy="60" r="8" fill="#00D4FF" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-tech text-xl font-bold mb-2">BassMaster Elite</h3>
+                    <p class="text-gray-400 mb-4">High-performance subwoofer for deep, rich bass</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-neon-blue">$649</span>
+                        <button class="bg-neon-blue text-dark-bg px-6 py-2 rounded-lg font-semibold hover:bg-white transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-tech text-4xl font-bold text-white mb-4">Why Choose SonicWave</h2>
+                <p class="text-gray-400 text-lg">Excellence in every detail</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-card-bg rounded-xl border border-gray-800 hover-glow">
+                    <div class="w-16 h-16 bg-neon-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-neon-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-tech text-xl font-bold mb-4 text-neon-blue">Premium Quality</h3>
+                    <p class="text-gray-400">Crafted with the finest materials and cutting-edge technology for unmatched durability and performance.</p>
+                </div>
+                
+                <div class="text-center p-8 bg-card-bg rounded-xl border border-gray-800 hover-glow">
+                    <div class="w-16 h-16 bg-neon-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-neon-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-tech text-xl font-bold mb-4 text-neon-blue">Sleek Design</h3>
+                    <p class="text-gray-400">Minimalist aesthetics that complement any modern space while delivering exceptional acoustic performance.</p>
+                </div>
+                
+                <div class="text-center p-8 bg-card-bg rounded-xl border border-gray-800 hover-glow">
+                    <div class="w-16 h-16 bg-neon-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-neon-blue" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-tech text-xl font-bold mb-4 text-neon-blue">Immersive Sound</h3>
+                    <p class="text-gray-400">Experience audio like never before with our advanced sound engineering and spatial audio technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section id="reviews" class="py-20 bg-card-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-tech text-4xl font-bold text-white mb-4">What Our Customers Say</h2>
+                <p class="text-gray-400 text-lg">Real experiences from real audiophiles</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-dark-bg p-6 rounded-xl border border-gray-800">
+                    <div class="flex mb-4">
+                        <span class="text-neon-blue">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"The SonicWave Pro X1 completely transformed my home theater experience. The sound quality is absolutely incredible!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-neon-blue/20 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-neon-blue font-bold">MJ</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Michael Johnson</p>
+                            <p class="text-gray-400 text-sm">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-bg p-6 rounded-xl border border-gray-800">
+                    <div class="flex mb-4">
+                        <span class="text-neon-blue">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"Amazing build quality and the 360° sound is mind-blowing. Worth every penny for the premium experience."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-neon-blue/20 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-neon-blue font-bold">SC</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Sarah Chen</p>
+                            <p class="text-gray-400 text-sm">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-bg p-6 rounded-xl border border-gray-800">
+                    <div class="flex mb-4">
+                        <span class="text-neon-blue">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">"The bass from the BassMaster Elite is phenomenal. Perfect for my music studio setup. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-neon-blue/20 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-neon-blue font-bold">DR</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">David Rodriguez</p>
+                            <p class="text-gray-400 text-sm">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="font-tech text-5xl font-bold text-white mb-6">
+                Ready to Experience
+                <span class="text-neon-blue text-glow block">True Sound?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Join thousands of satisfied customers who have elevated their audio experience with SonicWave premium products.
+            </p>
+            <button class="bg-neon-blue text-dark-bg px-12 py-4 rounded-lg font-bold text-xl hover-glow transition-all duration-300 font-tech">
+                Shop Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-tech text-2xl font-bold text-neon-blue text-glow mb-4">SonicWave</div>
+                    <p class="text-gray-400">Premium audio equipment for the modern lifestyle.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-neon-blue transition-colors">Soundbars</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition-colors">Speakers</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition-colors">Subwoofers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-neon-blue transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition-colors">Warranty</a></li>
+                        <li><a href="#" class="hover:text-neon-blue transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-neon-blue transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-neon-blue transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SonicWave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add click functionality to all buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.includes('Buy Now')) {
+                    alert('🛒 Product added to cart! (This is a demo - no actual purchase will be made)');
+                } else if (this.textContent.includes('Shop Now') || this.textContent.includes('Explore Collection')) {
+                    document.querySelector('#products').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.hover-glow').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'978567f7e0ba1710',t:'MTc1NjczNjQwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,24 @@
+big {
+    background-color: aqua;
+      color:blue
+}
+
+table {
+    background-color: black;
+     color: aliceblue;
+     border: 2px solid  blue;
+    }
+
+img {
+    background-color: darkmagenta;
+     border: 4px solid rgb(9, 1, 19);
+    
+}
+
+#action {
+     background-color: black;
+     color: rgb(250, 251, 251);
+
+}
+
+
